@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 
 <!doctype html>
@@ -55,6 +56,11 @@
 <main class="container">
   <div class="bg-light p-5 rounded">
     <h1 class="title">{{title}}</h1>
+    <form method="post" action="">
+      {% csrf_token %}
+      {{form|crispy}}
+      <input class="btn btn-primary" type="submit" value="Search" />
+      </form>
     <table>
         <tr>
             <th>#</th>
