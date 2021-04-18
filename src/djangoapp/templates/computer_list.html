@@ -72,6 +72,9 @@
             <td>{{instance.IP_address}}</td>
             <td>{{instance.users_name}}</td>
             <td>{{instance.location}}</td>
+            <td>{{instance.purchase_date}}</td>
+            <td>{{instance.timestamp}}</td>
+            <td><a href="{% url 'computer_delete' id=instance.id %}">Delete</a></td>
         </tr>
         {% endfor %}
     </table>
